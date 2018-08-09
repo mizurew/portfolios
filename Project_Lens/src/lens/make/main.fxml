@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lens.make.MainCon">
+   <children>
+      <AnchorPane prefHeight="550.0" prefWidth="600.0" style="-fx-background-color: #353b46;">
+         <children>
+            <Button fx:id="btHRS" disable="true" layoutX="377.0" layoutY="105.0" mnemonicParsing="false" onAction="#btHRSm" prefHeight="38.0" prefWidth="206.0" style="-fx-background-color: white;" text="HRS(인사관리시스템)">
+               <font>
+                  <Font name="HCR Dotum Bold" size="15.0" />
+               </font></Button>
+            <Button fx:id="btSCM" disable="true" layoutX="377.0" layoutY="167.0" mnemonicParsing="false" onAction="#btSCMm" prefHeight="38.0" prefWidth="206.0" style="-fx-background-color: white;" text="PMS(제품관리시스템)">
+               <font>
+                  <Font name="HCR Dotum Bold" size="15.0" />
+               </font></Button>
+            <Button fx:id="btODM" disable="true" layoutX="377.0" layoutY="222.0" mnemonicParsing="false" onAction="#btODMm" prefHeight="38.0" prefWidth="206.0" style="-fx-background-color: white;" text="ODM(생산/주문관리시스템)">
+               <font>
+                  <Font name="HCR Dotum Bold" size="15.0" />
+               </font></Button>
+            <Button fx:id="btCRS" disable="true" layoutX="377.0" layoutY="279.0" mnemonicParsing="false" onAction="#btCRSm" prefHeight="38.0" prefWidth="206.0" style="-fx-background-color: white;" text="CRS(고객관리시스템)">
+               <font>
+                  <Font name="HCR Dotum Bold" size="15.0" />
+               </font></Button>
+            <TextField fx:id="txid" layoutX="159.0" layoutY="105.0" onAction="#txidm" prefHeight="38.0" prefWidth="165.0" promptText="ID" style="-fx-background-color: tan;" />
+            <PasswordField fx:id="txpsw" layoutX="159.0" layoutY="165.0" onAction="#txpswm" prefHeight="38.0" prefWidth="165.0" promptText="PSW" style="-fx-background-color: tan;" />
+            <Label layoutX="51.0" layoutY="111.0" text="관리자ID:" textFill="WHITE">
+               <font>
+                  <Font name="HCR Dotum Bold" size="22.0" />
+               </font></Label>
+            <Label layoutX="54.0" layoutY="174.0" text="비밀번호:" textFill="WHITE">
+               <font>
+                  <Font name="HCR Dotum Bold" size="22.0" />
+               </font></Label>
+            <Button fx:id="btlogin" layoutX="159.0" layoutY="222.0" mnemonicParsing="false" onAction="#btloginm" prefHeight="38.0" prefWidth="79.0" style="-fx-background-color: white;" text="로그인" textFill="#3d4328">
+               <font>
+                  <Font name="HCR Dotum Bold" size="15.0" />
+               </font></Button>
+            <Button fx:id="btlogout" layoutX="247.0" layoutY="222.0" mnemonicParsing="false" onAction="#btlogoutm" prefHeight="38.0" prefWidth="79.0" style="-fx-background-color: white;" text="로그아웃">
+               <font>
+                  <Font name="HCR Dotum Bold" size="15.0" />
+               </font></Button>
+            <Label layoutX="192.0" layoutY="25.0" prefHeight="55.0" prefWidth="391.0" text="데이터베이스 관리시스템" textFill="WHITE">
+               <font>
+                  <Font name="HCR Dotum" size="30.0" />
+               </font>
+            </Label>
+            <Label layoutX="270.0" layoutY="69.0" prefHeight="23.0" prefWidth="191.0" text="Database Management System" textFill="WHITE">
+               <font>
+                  <Font name="HCR Dotum" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="lb2" layoutX="154.0" layoutY="306.0" prefHeight="27.0" prefWidth="206.0" textFill="WHITE">
+               <font>
+                  <Font name="HCR Dotum Bold" size="18.0" />
+               </font>
+           </Label>
+            <Label fx:id="lb1" layoutX="154.0" layoutY="275.0" prefHeight="27.0" prefWidth="206.0" text="로그인이 필요합니다." textFill="WHITE">
+               <font>
+                  <Font name="HCR Dotum Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

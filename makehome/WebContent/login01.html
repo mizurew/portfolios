@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h2>회원가입양식</h2>
+<form>
+	<fieldset>
+	<legend>필수요소</legend>
+	<p>아이디:<input type='text' name='id' size='15' required></p>
+	<p>비밀번호:<input type='password' name='psw'size='15' placeholder='뻔한걸로하지마세요' required></p>
+	<p></p>
+	<p>이름:<input type='text' name='name'></p>
+	<p>전화번호:<input type='text' name='pnb' placeholder='-없이 작성'>
+	<button>인증번호전송</button></p>
+	<p>주소:<select name='pln'>
+		<option value='1' selected>선화동</option>
+		<option value='2' selected>은행동</option>
+		<option value='3' selected>대흥동</option>
+		<option value='4' selected>배달안됨</option>
+	</select>
+	나머지 주소<input type='text' name='lpn' size='15'>
+</fieldset>
+<fieldset>
+<legend>선택요소</legend>
+<input type='radio' name='gnd' value='male'>남성
+<input type='radio' name='gnd' value='female'>여성
+<p></p>
+<h3>관심있는 항목을 선택해주세요</h3>
+<input type='checkbox' name='fms' value='chk'>치킨<input type='checkbox' name='fms' value='chk'>치킨
+<input type='checkbox' name='fms' value='chk'>치킨<br><input type='checkbox' name='fms' value='chk'>치킨
+<input type='checkbox' name='fms' value='chk'>치킨<input type='checkbox' name='fms' value='chk'>치킨<br>
+<input type='checkbox' name='fms' value='chk'>치킨<input type='checkbox' name='fms' value='chk'>치킨
+<input type='checkbox' name='fms' value='chk'>치킨
+<p></p>
+<h3>이메일 입력</h3>
+이메일:<input type='email' name='eml' placeholder='추첨쿠폰발송에이용됩니다.'>
+</fieldset>
+<input type="submit" value="주문하러가자!">
+<input type="reset" value="누르면멘붕">
+
+</form>
+</body>
+</html>

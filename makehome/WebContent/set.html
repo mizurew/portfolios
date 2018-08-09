@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>세트메뉴</title>
+<style>
+a { text-decoration:none }
+.result{
+color:red;
+font-size:12pt;
+}
+.money{
+color:white;
+font-size:14pt;
+font-weight:bold;
+}
+@font-face{
+font-family:'DXKPMB';
+src:url('DXKPMB.woff');
+}
+body, div, table {
+ font-family: 'DXKPMB';
+ font-size:14pt;
+}
+.frame{
+	width:1300px;
+	margin: 0 auto;
+	
+}
+.header {
+	
+	text-align: center;
+	
+	
+	
+}
+.logo{
+	font-size: 2em;
+	font-weight: bold;
+	
+	float: left;
+	margin-left: 100px;
+}
+.container01{
+	overflow:hidden;
+}
+.nav{
+	float: left;
+	width:400px;
+	
+	margin-left: 50px;
+}
+.log{
+	float: right;
+	width:300px;
+	
+	margin-right: 50px;
+}
+.navlist{
+	width: 80px;
+	
+	
+	font-size:12px;
+	font-weight:bold;
+	text-align: center;
+	padding: 15px 0;
+	float: left;
+}
+.loglist{
+	width: 80px;
+	
+	
+	font-size:12px;
+	font-weight:bold;
+	text-align: center;
+	padding: 15px 0;
+	float: right;
+
+
+}
+.nav-item{
+	margin:4px 0;
+	float: left;
+}
+.nav-link{
+	display: block;
+	text-decoration: none;
+	padding: 4px 10px;
+	color: #fff;
+}
+.nav-link:hover{
+	background: #5457de;
+}
+.section{
+	width:1300px;
+	margin: 0 auto;
+	
+	height:900px;
+}
+.container02{
+
+}
+.head{
+
+height: 100px;
+width: 1298px;
+float: left;
+text-align: center;
+
+}
+.main01{
+
+height: 360px;
+width: 300px;
+margin: 30px 65px 0 65px;
+float: left;
+
+}
+.copy01{
+	
+	height: 50px;
+	width: 298px;
+	text-align: center;
+	float: left;
+}
+.footer{
+	text-align: center;
+	
+	font-size: 10px;
+	width: 1300px;
+	height:70px;
+}
+ /*반투명 레이어 1---------------------------------*/
+#mask {  
+	  position:absolute;  
+	  z-index:9000;  
+	  background-color:#000;  
+	  display:none;  
+	  left:0;
+	  top:0;
+	}
+	.window{
+	  display: none;
+	  position:absolute;  
+	  left:100px;
+	  top:100px;
+	  z-index:10000;
+	}
+	/*반투명 레이어 2----------------------------*/
+#mask1 {  
+	  position:absolute;  
+	  z-index:9000;  
+	  background-color:#000;  
+	  display:none;  
+	  left:0;
+	  top:0;
+	}
+	.window1{
+	  display: none;
+	  position:absolute;  
+	  left:100px;
+	  top:100px;
+	  z-index:10000;
+	}
+	/*반투명 레이어 3----------------------------*/
+#mask2 {  
+	  position:absolute;  
+	  z-index:9000;  
+	  background-color:#000;  
+	  display:none;  
+	  left:0;
+	  top:0;
+	}
+	.window2{
+	  display: none;
+	  position:absolute;  
+	  left:100px;
+	  top:100px;
+	  z-index:10000;
+	}
+	/*반투명 레이어 4----------------------------*/
+#mask3 {  
+	  position:absolute;  
+	  z-index:9000;  
+	  background-color:#000;  
+	  display:none;  
+	  left:0;
+	  top:0;
+	}
+	.window3{
+	  display: none;
+	  position:absolute;  
+	  left:100px;
+	  top:100px;
+	  z-index:10000;
+	}
+	/*반투명 레이어 5----------------------------*/
+#mask4 {  
+	  position:absolute;  
+	  z-index:9000;  
+	  background-color:#000;  
+	  display:none;  
+	  left:0;
+	  top:0;
+	}
+	.window4{
+	  display: none;
+	  position:absolute;  
+	  left:100px;
+	  top:100px;
+	  z-index:10000;
+	}
+	/*반투명 레이어 6----------------------------*/
+#mask5 {  
+	  position:absolute;  
+	  z-index:9000;  
+	  background-color:#000;  
+	  display:none;  
+	  left:0;
+	  top:0;
+	}
+	.window5{
+	  display: none;
+	  position:absolute;  
+	  left:100px;
+	  top:100px;
+	  z-index:10000;
+	}
+</style>
+<script src="jquery-3.3.1.min.js"></script>
+<script>
+//반투명 레이어 1----------------------------------
+$(document).ready(function(){
+	function wrapWindowByMask(){
+		//화면의 높이와 너비를 구한다.
+		var maskHeight = $(document).height();  
+		var maskWidth = $(window).width();  
+
+		//마스크의 높이와 너비를 화면 것으로 만들어 전체 화면을 채운다.
+		$('#mask').css({'width':maskWidth,'height':maskHeight});  
+
+		//애니메이션 효과 - 일단 1초동안 까맣게 됐다가 80% 불투명도로 간다.
+		$('#mask').fadeIn(1000);      
+		$('#mask').fadeTo("slow",0.8);    
+
+		//윈도우 같은 거 띄운다.
+		$('.window').show();
+	}
+
+	$(document).ready(function(){
+		//검은 막 띄우기
+		$('.openMask').click(function(e){
+			e.preventDefault();
+			wrapWindowByMask();
+		});
+
+		//닫기 버튼을 눌렀을 때
+		$('.window .close').click(function (e) {  
+		    //링크 기본동작은 작동하지 않도록 한다.
+		    e.preventDefault();  
+		    $('#mask, .window').hide();  
+		});       
+
+		//검은 막을 눌렀을 때
+		$('#mask').click(function () {  
+		    $(this).hide();  
+		    $('.window').hide();  
+		});      
+	});
+});
+//반투명 레이어 2----------------------------------
+$(document).ready(function(){
+	function wrapWindowByMask(){
+		//화면의 높이와 너비를 구한다.
+		var maskHeight = $(document).height();  
+		var maskWidth = $(window).width();  
+
+		//마스크의 높이와 너비를 화면 것으로 만들어 전체 화면을 채운다.
+		$('#mask1').css({'width':maskWidth,'height':maskHeight});  
+
+		//애니메이션 효과 - 일단 1초동안 까맣게 됐다가 80% 불투명도로 간다.
+		$('#mask1').fadeIn(1000);      
+		$('#mask1').fadeTo("slow",0.8);    
+
+		//윈도우 같은 거 띄운다.
+		$('.window1').show();
+	}
+
+	$(document).ready(function(){
+		//검은 막 띄우기
+		$('.openMask1').click(function(e){
+			e.preventDefault();
+			wrapWindowByMask();
+		});
+
+		//닫기 버튼을 눌렀을 때
+		$('.window1 .close').click(function (e) {  
+		    //링크 기본동작은 작동하지 않도록 한다.
+		    e.preventDefault();  
+		    $('#mask1, .window1').hide();  
+		});       
+
+		//검은 막을 눌렀을 때
+		$('#mask1').click(function () {  
+		    $(this).hide();  
+		    $('.window1').hide();  
+		});      
+	});
+});
+//반투명 레이어 3----------------------------------
+$(document).ready(function(){
+	function wrapWindowByMask(){
+		//화면의 높이와 너비를 구한다.
+		var maskHeight = $(document).height();  
+		var maskWidth = $(window).width();  
+
+		//마스크의 높이와 너비를 화면 것으로 만들어 전체 화면을 채운다.
+		$('#mask2').css({'width':maskWidth,'height':maskHeight});  
+
+		//애니메이션 효과 - 일단 1초동안 까맣게 됐다가 80% 불투명도로 간다.
+		$('#mask2').fadeIn(1000);      
+		$('#mask2').fadeTo("slow",0.8);    
+
+		//윈도우 같은 거 띄운다.
+		$('.window2').show();
+	}
+
+	$(document).ready(function(){
+		//검은 막 띄우기
+		$('.openMask2').click(function(e){
+			e.preventDefault();
+			wrapWindowByMask();
+		});
+
+		//닫기 버튼을 눌렀을 때
+		$('.window2 .close').click(function (e) {  
+		    //링크 기본동작은 작동하지 않도록 한다.
+		    e.preventDefault();  
+		    $('#mask2, .window1').hide();  
+		});       
+
+		//검은 막을 눌렀을 때
+		$('#mask2').click(function () {  
+		    $(this).hide();  
+		    $('.window2').hide();  
+		});      
+	});
+});
+//반투명 레이어 4----------------------------------
+$(document).ready(function(){
+	function wrapWindowByMask(){
+		//화면의 높이와 너비를 구한다.
+		var maskHeight = $(document).height();  
+		var maskWidth = $(window).width();  
+
+		//마스크의 높이와 너비를 화면 것으로 만들어 전체 화면을 채운다.
+		$('#mask3').css({'width':maskWidth,'height':maskHeight});  
+
+		//애니메이션 효과 - 일단 1초동안 까맣게 됐다가 80% 불투명도로 간다.
+		$('#mask3').fadeIn(1000);      
+		$('#mask3').fadeTo("slow",0.8);    
+
+		//윈도우 같은 거 띄운다.
+		$('.window3').show();
+	}
+
+	$(document).ready(function(){
+		//검은 막 띄우기
+		$('.openMask3').click(function(e){
+			e.preventDefault();
+			wrapWindowByMask();
+		});
+
+		//닫기 버튼을 눌렀을 때
+		$('.window3 .close').click(function (e) {  
+		    //링크 기본동작은 작동하지 않도록 한다.
+		    e.preventDefault();  
+		    $('#mask3, .window1').hide();  
+		});       
+
+		//검은 막을 눌렀을 때
+		$('#mask3').click(function () {  
+		    $(this).hide();  
+		    $('.window3').hide();  
+		});      
+	});
+});
+//반투명 레이어 5----------------------------------
+$(document).ready(function(){
+	function wrapWindowByMask(){
+		//화면의 높이와 너비를 구한다.
+		var maskHeight = $(document).height();  
+		var maskWidth = $(window).width();  
+
+		//마스크의 높이와 너비를 화면 것으로 만들어 전체 화면을 채운다.
+		$('#mask4').css({'width':maskWidth,'height':maskHeight});  
+
+		//애니메이션 효과 - 일단 1초동안 까맣게 됐다가 80% 불투명도로 간다.
+		$('#mask4').fadeIn(1000);      
+		$('#mask4').fadeTo("slow",0.8);    
+
+		//윈도우 같은 거 띄운다.
+		$('.window4').show();
+	}
+
+	$(document).ready(function(){
+		//검은 막 띄우기
+		$('.openMask4').click(function(e){
+			e.preventDefault();
+			wrapWindowByMask();
+		});
+
+		//닫기 버튼을 눌렀을 때
+		$('.window4 .close').click(function (e) {  
+		    //링크 기본동작은 작동하지 않도록 한다.
+		    e.preventDefault();  
+		    $('#mask4, .window4').hide();  
+		});       
+
+		//검은 막을 눌렀을 때
+		$('#mask4').click(function () {  
+		    $(this).hide();  
+		    $('.window4').hide();  
+		});      
+	});
+});
+//반투명 레이어 6----------------------------------
+$(document).ready(function(){
+	function wrapWindowByMask(){
+		//화면의 높이와 너비를 구한다.
+		var maskHeight = $(document).height();  
+		var maskWidth = $(window).width();  
+
+		//마스크의 높이와 너비를 화면 것으로 만들어 전체 화면을 채운다.
+		$('#mask5').css({'width':maskWidth,'height':maskHeight});  
+
+		//애니메이션 효과 - 일단 1초동안 까맣게 됐다가 80% 불투명도로 간다.
+		$('#mask5').fadeIn(1000);      
+		$('#mask5').fadeTo("slow",0.8);    
+
+		//윈도우 같은 거 띄운다.
+		$('.window5').show();
+	}
+
+	$(document).ready(function(){
+		//검은 막 띄우기
+		$('.openMask5').click(function(e){
+			e.preventDefault();
+			wrapWindowByMask();
+		});
+
+		//닫기 버튼을 눌렀을 때
+		$('.window5 .close').click(function (e) {  
+		    //링크 기본동작은 작동하지 않도록 한다.
+		    e.preventDefault();  
+		    $('#mask5, .window5').hide();  
+		});       
+
+		//검은 막을 눌렀을 때
+		$('#mask5').click(function () {  
+		    $(this).hide();  
+		    $('.window5').hide();  
+		});      
+	});
+});
+</script>
+</head>
+<body>
+<div class='frame'>
+		<div class='header'>
+			<div class='container01'>
+				<div class='nav'>
+					<div class='navlist'><a href='main.html'>HOME</a></div>
+					<div class='navlist'><a href='set.html'>SET</a></div>
+					<div class='navlist'><a href='cus.html'>CUSTOM</a></div>
+					<div class='navlist'><a href='ran.html'>RANDOM</a></div>
+				</div>
+				<div class='logo'><a href='main.html'>치킨,오졌다!</a></div>
+				<div class='log'>
+					
+					<div class='loglist'><a href='mem.html'>membership</a></div>
+					<div class='loglist'><a href='log.html'>login</a></div>
+		
+		
+				</div>
+			</div>
+		</div>
+		<!--  header -->
+		<div class='section'>	
+			<div class='container02'>
+				<div class='head'>
+					<hr><br>
+					S E T<br>
+					<br>
+					<hr>
+				</div>
+	<!-- 반투명 레이어1 ---------------------------------- -->
+	<div id="mask"></div>
+	<div class="window">
+	<table>
+	<tr>
+	<td rowspan="2"> 
+		<img src="fri01.jpg" width="400px" height="400px"/>	
+	</td>
+	<td class="result">가격</td>
+	<td class="money">15000원</td>
+	<td><select name="subjects">
+  <option value="1" selected>1마리(콜라1개서비스)</option>
+  <option value="2">2마리(콜라1개서비스)</option>
+  <option value="3">3마리(콜라2개서비스)</option>
+  <option value="4">4마리(콜라2개서비스)</option>
+  <option value="4">5마리(콜라3개서비스)</option> 
+</select></td>
+	</tr>
+	<tr>
+	<td class="money">
+	치킨은 역시 후라이드가 원조!
+	</td>
+	</tr>
+	<tr>
+	<td>
+	</td>
+	<td align="right">
+	<input type="submit" value="주문" >
+	</td>
+	<td><input type="reset" value="리셋"></td>
+	</tr>
+	</table>
+				
+				</div>
+				<div class='main01'><a href="#" class="openMask"><img src='fri01.jpg' width='300px' height='300px'></a>
+					<div class='copy01'>후라이드치킨<br>15,000원</div>
+				</div>
+	<!-- 반투명 레이어 2 ------------------------- -->
+	<div id="mask1"></div>
+	<div class="window1">
+	<table>
+	<tr>
+	<td rowspan="2">
+		<img src="son01.jpg" width="400px" height="400px"/>	
+	</td>
+	<td class="result">가격</td>
+	<td class="money">16000원</td>
+	<td><select name="subjects">
+  <option value="1" selected>1마리(콜라1개서비스)</option>
+  <option value="2">2마리(콜라1개서비스)</option>
+  <option value="3">3마리(콜라2개서비스)</option>
+  <option value="4">4마리(콜라2개서비스)</option>
+  <option value="4">5마리(콜라3개서비스)</option> 
+</select></td>
+	</tr>
+	<tr>
+	<td class="money">
+	무슨소리,양념이 진리 아니냐?
+	</td>
+	</tr>
+	<tr>
+	<td>
+	</td>
+	<td align="right">
+	<input type="submit" value="주문" >
+	</td>
+	<td><input type="reset" value="리셋"></td>
+	</tr>
+	</table>
+	</div>
+				<div class='main01'><a href="#" class="openMask1"><img src='son01.jpg' width='300px' height='300px'></a>
+					<div class='copy01'>양념치킨<br>16,000원</div>
+				</div>
+<!-- 반투명 레이어 3 ------------------------- -->
+	<div id="mask2"></div>
+	<div class="window2">
+	<table>
+	<tr>
+	<td rowspan="2">
+		<img src="soy01.jpg" width="400px" height="400px"/>	
+	</td>
+	<td class="result">가격</td>
+	<td class="money">16000원</td>
+	<td><select name="subjects">
+  <option value="1" selected>1마리(콜라1개서비스)</option>
+  <option value="2">2마리(콜라1개서비스)</option>
+  <option value="3">3마리(콜라2개서비스)</option>
+  <option value="4">4마리(콜라2개서비스)</option>
+  <option value="4">5마리(콜라3개서비스)</option> 
+</select></td>
+	</tr>
+	<tr>
+	<td class="money">
+	교O치킨 무시하냐?
+	</td>
+	</tr>
+	<tr>
+	<td>
+	</td>
+	<td align="right">
+	<input type="submit" value="주문" >
+	</td>
+	<td><input type="reset" value="리셋"></td>
+	</tr>
+	</table>
+	</div>
+				<div class='main01'><a href="#" class="openMask2"><img src='soy01.jpg' width='300px' height='300px'></a>
+					<div class='copy01'>간장치킨<br>16,000원</div>
+				</div>
+	<!-- 반투명 레이어 4 ------------------------- -->
+	<div id="mask3"></div>
+	<div class="window3">
+	<table>
+	<tr>
+	<td rowspan="2">
+		<img src="half01.jpg" width="400px" height="400px"/>	
+	</td>
+	<td class="result">가격</td>
+	<td class="money">17000원</td>
+	<td><select name="subjects">
+  <option value="1" selected>1마리(콜라1개서비스)</option>
+  <option value="2">2마리(콜라1개서비스)</option>
+  <option value="3">3마리(콜라2개서비스)</option>
+  <option value="4">4마리(콜라2개서비스)</option>
+  <option value="4">5마리(콜라3개서비스)</option> 
+</select></td>
+	</tr>
+	<tr>
+	<td class="money">
+	싸우지마라 ㅉㅉ
+	</td>
+	</tr>
+	<tr>
+	<td>
+	</td>
+	<td align="right">
+	<input type="submit" value="주문" >
+	</td>
+	<td><input type="reset" value="리셋"></td>
+	</tr>
+	</table>
+	</div>
+				<div class='main01'><a href="#" class="openMask3"><img src='half01.jpg' width='300px' height='300px'></a>
+					<div class='copy01'>반반치킨<br>17,000원</div>
+				</div>
+	<!-- 반투명 레이어 5 ------------------------- -->
+	<div id="mask4"></div>
+	<div class="window4">
+	<table>
+	<tr>
+	<td rowspan="2">
+		<img src="gal01.jpg" width="400px" height="400px"/>	
+	</td>
+	<td class="result">가격</td>
+	<td class="money">16000원</td>
+	<td><select name="subjects">
+  <option value="1" selected>1마리(콜라1개서비스)</option>
+  <option value="2">2마리(콜라1개서비스)</option>
+  <option value="3">3마리(콜라2개서비스)</option>
+  <option value="4">4마리(콜라2개서비스)</option>
+  <option value="4">5마리(콜라3개서비스)</option> 
+</select></td>
+	</tr>
+	<tr>
+	<td class="money">
+	곰도 사람 만들어버리죵?
+	</td>
+	</tr>
+	<tr>
+	<td>
+	</td>
+	<td align="right">
+	<input type="submit" value="주문" >
+	</td>
+	<td><input type="reset" value="리셋"></td>
+	</tr>
+	</table>
+	</div>
+				<div class='main01'><a href="#" class="openMask4"><img src='gal01.jpg' width='300px' height='300px'></a>
+					<div class='copy01'>갈릭치킨<br>16,000원</div>
+				</div>
+	<!-- 반투명 레이어 6 ------------------------- -->
+	<div id="mask5"></div>
+	<div class="window5">
+	<table>
+	<tr>
+	<td rowspan="2">
+		<img src="hot01.jpg" width="400px" height="400px"/>	
+	</td>
+	<td class="result">가격</td>
+	<td class="money">16000원</td>
+	<td><select name="subjects">
+  <option value="1" selected>1마리(콜라1개서비스)</option>
+  <option value="2">2마리(콜라1개서비스)</option>
+  <option value="3">3마리(콜라2개서비스)</option>
+  <option value="4">4마리(콜라2개서비스)</option>
+  <option value="4">5마리(콜라3개서비스)</option> 
+</select></td>
+	<tr>
+	<td class="money">
+	소주한잔 콜?
+	</td>
+	</tr>
+	<tr>
+	<td>
+	</td>
+	<td align="right">
+	<input type="submit" value="주문" >
+	</td>
+	<td><input type="reset" value="리셋"></td>
+	</tr>
+	</table>
+	</div>
+				<div class='main01'><a href="#" class="openMask5"><img src='hot01.jpg' width='300px' height='300px'></a>
+					<div class='copy01'>매콤치킨<br>16,000원</div>
+				</div>
+			</div>
+		</div>
+		<!-- section -->
+		<div class='footer'>
+		상호명: 치킨,오졌다! | 대표: 김성규 | 개인정보관리책임자: 임수용 | 전화: 010-2565-9988 | 이메일: makehome11@mail.com <br>
+주소: 대전광역시 중구 선화서로 24번길 14 | 사업자등록번호: 322-68-467708 <br>
+Copyright © 2018 SKHOME
+		</div>
+		<!-- footer -->
+	</div>
+			
+</body>
+</html>

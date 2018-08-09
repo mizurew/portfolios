@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>랜덤메뉴</title>
+<script>
+	 function shuffle(arr){
+	 var len = arr.length;
+	 for(var i=0; i<1000; i++){
+	  rdm = parseInt(Math.random()*len);
+	  var temp = arr[rdm];
+	  arr[rdm] = arr[0];
+	  arr[0] = temp;
+	 }
+	 return arr;
+	}
+var chicken=['<img src="fri01.jpg" width="298px" height="298px">','<img src="son01.jpg" width="298px" height="298px">',
+				 '<img src="soy01.jpg" width="298px" height="298px">','<img src="half01.jpg" width="298px" height="298px">',
+				 '<img src="gal01.jpg" width="298px" height="298px">','<img src="hot01.jpg" width="298px" height="298px">'
+				]
+	var side=['<img src="shr01.jpg" width="298px" height="298px">','<img src="squ01.jpg" width="298px" height="298px">',
+			  '<img src="pot01.jpg" width="298px" height="298px">',
+			  ]
+	var bever=['<img src="cok01.jpg" width="298px" height="298px">','<img src="sid01.jpg" width="298px" height="298px">',]
+	
+	chicken = shuffle(chicken);
+	side = shuffle(side);
+	bever = shuffle(bever);
+	div1=chicken.slice(0,1);	
+	div2=side.slice(0,1);
+	div3=bever.slice(0,1);
+	
+</script>
+<style>
+a { text-decoration:none }
+@font-face{
+font-family:'DXKPMB';
+src:url('DXKPMB.woff');
+}
+body, div, button{
+ font-family:'DXKPMB';
+ font-size:13pt;
+}
+.frame{
+	width:1300px;
+	margin: 0 auto;
+	
+}
+.header {
+	
+	text-align: center;
+	
+	
+	
+}
+.logo{
+	font-size: 2em;
+	font-weight: bold;
+	
+	float: left;
+	margin-left: 100px;
+}
+.container01{
+	overflow:hidden;
+}
+.nav{
+	float: left;
+	width:400px;
+	
+	margin-left: 50px;
+}
+.log{
+	float: right;
+	width:300px;
+	
+	margin-right: 50px;
+}
+.navlist{
+	width: 80px;
+	
+	
+	font-size:12px;
+	font-weight:bold;
+	text-align: center;
+	padding: 15px 0;
+	float: left;
+}
+.loglist{
+	width: 80px;
+	
+	
+	font-size:12px;
+	font-weight:bold;
+	text-align: center;
+	padding: 15px 0;
+	float: right;
+
+
+}
+.nav-item{
+	margin:4px 0;
+	float: left;
+}
+.nav-link{
+	display: block;
+	text-decoration: none;
+	padding: 4px 10px;
+	color: #fff;
+}
+.nav-link:hover{
+	background: #5457de;
+}
+.section{
+	width:1300px;
+	margin: 0 auto;
+	border: 1px solid white;
+	height:700px;
+}
+
+.head{
+
+height: 100px;
+width: 1298px;
+float: left;
+text-align: center;
+
+}
+.ranc{
+	
+	width: 1100px;
+	height: 400px;
+	margin: 100px 100px 0px 100px;
+}
+.ran{
+	
+	width: 300px;
+	height: 300px;
+	margin: 50px 32px;
+	float: left;
+}
+.pick{
+	
+	width: 100px;
+	height: 50px;
+	margin: 30px 598px;
+	
+
+}
+.footer{
+	text-align: center;
+	
+	font-size: 10px;
+	width: 1300px;
+	height:70px;
+}
+
+
+</style>
+</head>
+<body>
+<div class='frame'>
+		<div class='header'>
+			<div class='container01'>
+				<div class='nav'>
+					<div class='navlist'><a href='main.html'>HOME</a></div>
+					<div class='navlist'><a href='set.html'>SET</a></div>
+					<div class='navlist'><a href='cus.html'>CUSTOM</a></div>
+					<div class='navlist'><a href='ran.html'>RANDOM</a></div>
+				</div>
+				<div class='logo'><a href='main.html'>치킨,오졌다!</a></div>
+				<div class='log'>
+					
+					<div class='loglist'><a href='mem.html'>membership</a></div>
+					<div class='loglist'><a href='log.html'>login</a></div>
+		
+		
+				</div>
+			</div>
+		</div>
+		<!--  header -->
+		<div class='section'>	
+			<div class='head'>
+					<hr><br>
+					R A N D O M<br>
+					<br>
+					<hr>
+			</div>
+			<div class='ranc'>
+				<div class='ran'>
+					<script>document.write(div1)</script>
+				</div>
+				<div class='ran'>
+					<script>document.write(div2)</script>
+				</div>
+				<div class='ran'>
+					<script>document.write(div3)</script>
+				</div>
+			</div>
+				<div class='pick'>
+				
+							<button style='background-color:white; height:48px; width:98px;'><a href="ran.html" >랜덤고르기</a></button>
+				</div>
+			</div>
+		
+		<!-- section -->
+		<div class='footer'>
+		상호명: 치킨,오졌다! | 대표: 김성규 | 개인정보관리책임자: 임수용 | 전화: 010-2565-9988 | 이메일: makehome11@mail.com <br>
+주소: 대전광역시 중구 선화서로 24번길 14 | 사업자등록번호: 322-68-467708 <br>
+Copyright © 2018 SKHOME
+		</div>
+		<!-- footer -->
+	</div>
+			
+
+</body>
+</html>

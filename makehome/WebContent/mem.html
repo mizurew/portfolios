@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>회원가입</title>
+<script>
+function btn(){
+	alert("인증번호가 전송되었습니다.")
+}
+</script>
+<style>
+a { text-decoration:none }
+@font-face{
+font-family:'DXKPMB';
+src:url('DXKPMB.woff');
+}
+body, div, table,input {
+ font-family: 'DXKPMB';
+ font-size:14pt;
+}
+.frame{
+	width:1300px;
+	margin: 0 auto;
+	
+}
+.header {
+	
+	text-align: center;
+	
+	
+	
+}
+.logo{
+	font-size: 2em;
+	font-weight: bold;
+	
+	float: left;
+	margin-left: 100px;
+}
+.container01{
+	overflow:hidden;
+}
+.nav{
+	float: left;
+	width:400px;
+	
+	margin-left: 50px;
+}
+.log{
+	float: right;
+	width:300px;
+	
+	margin-right: 50px;
+}
+.navlist{
+	width: 80px;
+	
+	
+	font-size:12px;
+	font-weight:bold;
+	text-align: center;
+	padding: 15px 0;
+	float: left;
+}
+.loglist{
+	width: 80px;
+	
+	
+	font-size:12px;
+	font-weight:bold;
+	text-align: center;
+	padding: 15px 0;
+	float: right;
+
+
+}
+.nav-item{
+	margin:4px 0;
+	float: left;
+}
+.nav-link{
+	display: block;
+	text-decoration: none;
+	padding: 4px 10px;
+	color: #fff;
+}
+.nav-link:hover{
+	background: #5457de;
+}
+.section{
+	width:1300px;
+	margin: 0 auto;
+	
+	height:800px;
+}
+.head{
+
+height: 100px;
+width: 1298px;
+float: left;
+text-align: center;
+
+}
+
+.memb{
+	border: 1px solid #aaa;
+	width: 508px;
+	height: 560px;
+	margin: 50px 396px;
+	float: left;
+}
+.memin{
+	
+	width: 358px;
+	height: 560px;
+	margin: 0px 70px;
+	float: left;
+
+
+}
+
+
+
+
+
+
+.footer{
+	text-align: center;
+	
+	font-size: 10px;
+	width: 1300px;
+	height:70px;
+}
+
+</style>
+</head>
+<body>
+<div class='frame'>
+		<div class='header'>
+			<div class='container01'>
+				<div class='nav'>
+					<div class='navlist'><a href='main.html'>HOME</a></div>
+					<div class='navlist'><a href='set.html'>SET</a></div>
+					<div class='navlist'><a href='cus.html'>CUSTOM</a></div>
+					<div class='navlist'><a href='ran.html'>RANDOM</a></div>
+				</div>
+				<div class='logo'><a href='main.html'>치킨,오졌다!</a></div>
+				<div class='log'>
+					
+					<div class='loglist'><a href='mem.html'>membership</a></div>
+					<div class='loglist'><a href='log.html'>login</a></div>
+		
+		
+				</div>
+			</div>
+		</div>
+		<!--  header -->
+		<div class='section'>
+			<div class='head'>
+					<hr><br>
+					M E M B E R S H I P<br>
+					<br>
+					<hr>
+				</div>
+			
+				<div class='memb'>
+					<div class='memin'>
+						<form name="membership" action="memget.jsp" method="post">
+					<fieldset>
+	<legend>필수요소</legend>
+	<table text-align='center'>
+	<tr>
+	<td>아이디</td><td colspan='2'><input type='text' name='id' size='10' required></td></tr>
+	<tr>
+	<td>비밀번호</td><td colspan='2'><input type='password' name='psw'size='10' placeholder='뻔한걸로하지마세요' required></td></tr>
+	<tr>
+	<td>이름</td><td><input type='text' name='name' size='10'></td></tr>
+	<tr>
+	<td>전화번호</td><td><input type='text' name='pnb' size='10' placeholder='-없이 작성'></td>
+	<td><button type='button' onclick='btn()'>인증번호</button></td><tr>
+	<tr>
+	<td>주소</td><td><select name='pln'>
+		<option value='선화' selected>선화동</option>
+		<option value='은행' selected>은행동</option>
+		<option value='대흥' selected>대흥동</option>
+		<option value='불가' selected>배달안됨</option>
+	</select></td>
+	<td>
+	나머지<input type='text' name='lpn' size='7'></td></tr>
+	</table>
+</fieldset>
+			<fieldset>
+<legend>선택요소</legend>
+<input type='radio' name='gnd' value='male'>남성
+<input type='radio' name='gnd' value='female'>여성
+<p></p>
+<h3>관심있는 항목을 선택해주세요</h3>
+<input type='checkbox' name='fms' value='fri'>후라이드<input type='checkbox' name='fms' value='son'>양념
+<input type='checkbox' name='fms' value='soy'>간장<br><input type='checkbox' name='fms' value='gal'>마늘
+<input type='checkbox' name='fms' value='nob'>순살<input type='checkbox' name='fms' value='half'>반반<br>
+<input type='checkbox' name='fms' value='hot'>핫<input type='checkbox' name='fms' value='che'>치즈
+<input type='checkbox' name='fms' value='all'>ALL
+<p></p>
+<h3>이메일 입력</h3>
+이메일:<input type='email' name='eml' placeholder='추첨쿠폰발송에이용됩니다.'>
+</fieldset>
+<p></p>
+&nbsp;&nbsp;<input type="submit" style='font-size:20px; width:150px; height:50px; background-color:white;' value="가입하기">
+&nbsp;&nbsp;&nbsp;&nbsp;<input type="reset" style='font-size:20px; width:150px; height:50px; background-color:white;'value="다시작성">
+</form>	
+</div>
+			</div>
+		</div>
+			<!-- section -->
+		<div class='footer'>
+		상호명: 치킨,오졌다! | 대표: 김성규 | 개인정보관리책임자: 임수용 | 전화: 010-2565-9988 | 이메일: makehome11@mail.com <br>
+주소: 대전광역시 중구 선화서로 24번길 14 | 사업자등록번호: 322-68-467708 <br>
+Copyright © 2018 SKHOME
+		</div>
+		<!-- footer -->
+	</div>
+		
+</body>
+</html>

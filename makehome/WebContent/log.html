@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>로그인</title>
+<style>
+a { text-decoration:none }
+@font-face{
+font-family:'DXKPMB';
+src:url('DXKPMB.woff');
+}
+body, div, table,button,input {
+ font-family: 'DXKPMB';
+ font-size:14pt;
+}
+.frame{
+	width:1300px;
+	margin: 0 auto;
+	
+}
+.header {
+	
+	text-align: center;
+	
+	
+	
+}
+.logo{
+	font-size: 2em;
+	font-weight: bold;
+	
+	float: left;
+	margin-left: 100px;
+}
+.container01{
+	overflow:hidden;
+}
+.nav{
+	float: left;
+	width:400px;
+	
+	margin-left: 50px;
+}
+.log{
+	float: right;
+	width:300px;
+	
+	margin-right: 50px;
+}
+.navlist{
+	width: 80px;
+	
+	
+	font-size:12px;
+	font-weight:bold;
+	text-align: center;
+	padding: 15px 0;
+	float: left;
+}
+.loglist{
+	width: 80px;
+	
+	
+	font-size:12px;
+	font-weight:bold;
+	text-align: center;
+	padding: 15px 0;
+	float: right;
+
+
+}
+.nav-item{
+	margin:4px 0;
+	float: left;
+}
+.nav-link{
+	display: block;
+	text-decoration: none;
+	padding: 4px 10px;
+	color: #fff;
+}
+.nav-link:hover{
+	background: #5457de;
+}
+.section{
+	width:1300px;
+	margin: 0 auto;
+	
+	height:800px;
+}
+.head{
+
+height: 100px;
+width: 1298px;
+float: left;
+text-align: center;
+
+}
+
+.memb{
+	border: 1px solid #aaa;
+	width: 508px;
+	height: 560px;
+	margin: 70px 396px;
+	float: left;
+}
+.log01{
+	
+	width: 308px;
+	height: 400px;
+	margin: 70px 100px;
+	float: left;
+
+}
+
+.footer{
+	text-align: center;
+	
+	font-size: 10px;
+	width: 1300px;
+	height:70px;
+}
+</style>
+</head>
+<body>
+<div class='frame'>
+		<div class='header'>
+			<div class='container01'>
+				<div class='nav'>
+					<div class='navlist'><a href='main.html'>HOME</a></div>
+					<div class='navlist'><a href='set.html'>SET</a></div>
+					<div class='navlist'><a href='cus.html'>CUSTOM</a></div>
+					<div class='navlist'><a href='ran.html'>RANDOM</a></div>
+				</div>
+				<div class='logo'><a href='main.html'>치킨,오졌다!</a></div>
+				<div class='log'>
+					
+					<div class='loglist'><a href='mem.html'>membership</a></div>
+					<div class='loglist'><a href='log.html'>login</a></div>
+		
+		
+				</div>
+			</div>
+		</div>
+		<!--  header -->
+		<div class='section'>
+			<div class='head'>
+					<hr><br>
+					L O G I N<br>
+					<br>
+					<hr>
+				</div>
+			
+				<div class='memb'>
+					<div class='log01' style='font-size:20px;''>
+					<form name="login" action="logget.jsp" method="post">
+				<p>아이디</p>
+				<p><input type='text' name='id' style='font-size:30px; width:300px; height:50px;' placeholder='아이디' required></p>
+				<p>비밀번호</p>
+				<p><input type='password' name='psw' style='font-size:30px; width:300px; height:50px;' placeholder='비밀번호' required></p>
+				<p></p>
+				<p><input type="submit" style='font-size:30px; width:150px; height:50px; background-color:white;' value="로그인">
+				<button type="button" style='font-size:30px; width:150px; height:50px; background-color:white;'><a href='mem.html'>회원가입</a></button>
+				</p>
+				</form>
+				</div>
+				</div>
+		</div>
+			<!-- section -->
+		<div class='footer'>
+		상호명: 치킨,오졌다! | 대표: 김성규 | 개인정보관리책임자: 임수용 | 전화: 010-2565-9988 | 이메일: makehome11@mail.com <br>
+주소: 대전광역시 중구 선화서로 24번길 14 | 사업자등록번호: 322-68-467708 <br>
+Copyright © 2018 SKHOME
+		</div>
+		<!-- footer -->
+	</div>
+		
+</body>
+</html>

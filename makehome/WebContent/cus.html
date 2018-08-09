@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>커스텀메뉴</title>
+<script src='jquery-3.3.1.min.js'></script>
+<script>
+	$(document).ready(function(){
+		$("button.chick01").click(function(){
+			$(".pic011").show();
+			$(".pic012").hide();
+			$(".pic013").hide();
+			$(".pic014").hide();
+			$(".pic015").hide();
+			$(".pic016").hide();
+		});
+		$("button.chick02").click(function(){
+			$(".pic011").hide();
+			$(".pic012").show();
+			$(".pic013").hide();
+			$(".pic014").hide();
+			$(".pic015").hide();
+			$(".pic016").hide();
+		});
+		$("button.chick03").click(function(){
+			$(".pic011").hide();
+			$(".pic012").hide();
+			$(".pic013").show();
+			$(".pic014").hide();
+			$(".pic015").hide();
+			$(".pic016").hide();
+		});
+		$("button.chick04").click(function(){
+			$(".pic011").hide();
+			$(".pic012").hide();
+			$(".pic013").hide();
+			$(".pic014").show();
+			$(".pic015").hide();
+			$(".pic016").hide();
+		});
+		$("button.chick05").click(function(){
+			$(".pic011").hide();
+			$(".pic012").hide();
+			$(".pic013").hide();
+			$(".pic014").hide();
+			$(".pic015").show();
+			$(".pic016").hide();
+		});
+		$("button.chick06").click(function(){
+			$(".pic011").hide();
+			$(".pic012").hide();
+			$(".pic013").hide();
+			$(".pic014").hide();
+			$(".pic015").hide();
+			$(".pic016").show();
+		});
+		$("button.side01").click(function(){
+			$(".sid01").show();
+			$(".sid02").hide();
+			$(".sid03").hide();
+		});
+		$("button.side02").click(function(){
+			$(".sid01").hide();
+			$(".sid02").show();
+			$(".sid03").hide();
+		});
+		$("button.side03").click(function(){
+			$(".sid01").hide();
+			$(".sid02").hide();
+			$(".sid03").show();
+		});
+		$("button.bever01").click(function(){
+			$(".bev01").show();
+			$(".bev02").hide();
+			
+		});
+		$("button.bever02").click(function(){
+			$(".bev01").hide();
+			$(".bev02").show();
+			
+		});
+	});
+
+
+</script>
+
+<style>
+a { text-decoration:none }
+@font-face{
+font-family:'DXKPMB';
+
+src:url('DXKPMB.woff');
+}
+body, div, table, button {
+ font-family: 'DXKPMB';
+ font-size:12pt;
+}
+
+.frame{
+	width:1300px;
+	margin: 0 auto;
+	
+}
+.header {
+	
+	text-align: center;
+	
+	
+	
+}
+.logo{
+	font-size: 2em;
+	font-weight: bold;
+	
+	float: left;
+	margin-left: 100px;
+}
+.container01{
+	overflow:hidden;
+}
+.nav{
+	float: left;
+	width:400px;
+	
+	margin-left: 50px;
+}
+.log{
+	float: right;
+	width:300px;
+	
+	margin-right: 50px;
+}
+.navlist{
+	width: 80px;
+	
+	
+	font-size:12px;
+	font-weight:bold;
+	text-align: center;
+	padding: 15px 0;
+	float: left;
+}
+.loglist{
+	width: 80px;
+	
+	
+	font-size:12px;
+	font-weight:bold;
+	text-align: center;
+	padding: 15px 0;
+	float: right;
+
+
+}
+.nav-item{
+	margin:4px 0;
+	float: left;
+}
+.nav-link{
+	display: block;
+	text-decoration: none;
+	padding: 4px 10px;
+	color: #fff;
+}
+.nav-link:hover{
+	background: #5457de;
+}
+.section{
+	width:1300px;
+	margin: 0 auto;
+	
+	height:700px;
+}
+
+.head{
+
+height: 100px;
+width: 1298px;
+float: left;
+text-align: center;
+
+}
+.sel{
+	
+	width: 325px;
+	height: 500px;
+	
+	margin-top: 50px;
+	margin-bottom: 20px;
+	margin-left: 162px;
+	margin-right: 50px;
+	float:left;
+}
+.sel02{
+	
+	width: 323px;
+	height: 42px;
+}
+.sel03{
+	
+	width: 105px;
+	height: 48px;
+	float: left;
+}
+.sel04{
+	
+	width: 105px;
+	height: 98px;
+	float: left;
+}
+.sel05{
+	
+	width: 105px;
+	height: 98px;
+	float: left;
+}
+.sel01{
+	
+	width: 323px;
+	height: 100px;
+	margin-top: 0px;
+	margin-bottom: 10px;
+}
+.pic{
+	float: left;
+	
+	width: 310px;
+	height: 310px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	margin-left:100px;
+	margin-right: 50px;
+}
+.bev{
+	float: left;
+	
+	width: 150px;
+	height: 310px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	margin-left:0px;
+	margin-right: 50px;
+}
+
+.sid{
+	float: left;
+	
+	width: 310px;
+	height: 130px;
+	margin-top: 0px;
+	margin-bottom: 50px;
+	margin-left:100px;
+	margin-right: 50px;
+}
+.mue{
+	float: left;
+	
+	width: 150px;
+	height: 130px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-left:0px;
+	margin-right: 50px;
+
+}
+.pic011{
+	position: absolute;
+	
+	width: 308px;
+	height: 308px;
+	z-index: 10;
+}
+.pic012{
+	position: absolute;
+	
+	width: 308px;
+	height: 308px;
+	z-index: 9;
+}
+.pic013{
+	position: absolute;
+	
+	width: 308px;
+	height: 308px;
+	z-index: 8;
+}
+.pic014{
+	position: absolute;
+	
+	width: 308px;
+	height: 308px;
+	z-index: 7;
+}
+.pic015{
+	position: absolute;
+	
+	width: 308px;
+	height: 308px;
+	z-index: 6;
+}
+.pic016{
+	position: absolute;
+	
+	width: 308px;
+	height: 308px;
+	z-index: 5;
+}
+
+.bev01{
+	position: absolute;
+	
+	width: 148px;
+	height: 308px;
+	z-index: 1;
+}
+.bev02{
+	position: absolute;
+	
+	width: 148px;
+	height: 308px;
+	z-index: 0;
+}
+.sid01{
+	position: absolute;
+	
+	width: 308px;
+	height: 128px;
+	z-index: 4;
+}
+.sid02{
+	position: absolute;
+	
+	width: 308px;
+	height: 128px;
+	z-index: 3;
+}
+.sid03{
+	position: absolute;
+	
+	width: 308px;
+	height: 128px;
+	z-index: 2;
+}
+.mue01{
+	position: absolute;
+	
+	width: 148px;
+	height: 128px;
+	z-index: 10;
+}
+
+
+.footer{
+	text-align: center;
+	
+	font-size: 10px;
+	width: 1300px;
+	height:70px;
+}
+
+
+</style>
+</head>
+<body>
+<div class='frame'>
+		<div class='header'>
+			<div class='container01'>
+				<div class='nav'>
+					<div class='navlist' lang='en'><a href='main.html'>HOME</a></div>
+					<div class='navlist'><a href='set.html'>SET</a></div>
+					<div class='navlist'><a href='cus.html'>CUSTOM</a></div>
+					<div class='navlist'><a href='ran.html'>RANDOM</a></div>
+				</div>
+				<div class='logo'><a href='main.html'>치킨,오졌다!</a></div>
+				<div class='log'>
+					
+					<div class='loglist'><a href='mem.html'>membership</a></div>
+					<div class='loglist'><a href='log.html'>login</a></div>
+		
+		
+				</div>
+			</div>
+		</div>
+		<!--  header -->
+		<div class='section'>	
+			
+				<div class='head'>
+					<hr><br>
+					C U S T O M<br>
+					<br>
+					<hr>
+				</div>
+				<div class='sel'>
+					<div class= 'sel02'>치킨선택</div>
+					<div class= 'sel01'>
+						<div class= 'sel03'><button class="chick01" style='width:105px; height:48px; background:white;'>후라이드치킨</button></div>
+						<div class= 'sel03'><button class="chick02" style='width:105px; height:48px; background:white;'>양념치킨</button></div>
+						<div class= 'sel03'><button class="chick03" style='width:105px; height:48px; background:white;'>간장치킨</button></div>
+						<div class= 'sel03'><button class="chick04" style='width:105px; height:48px; background:white;'>반반치킨</button></div>
+						<div class= 'sel03'><button class="chick05" style='width:105px; height:48px; background:white;'>갈릭치킨</button></div>
+						<div class= 'sel03'><button class="chick06" style='width:105px; height:48px; background:white;'>매콤치킨</button></div>
+					</div>	
+					<div class= 'sel02'>사이드선택</div>
+					<div class= 'sel01'>
+						<div class= 'sel04'><button class="side01" style='width:105px; height:48px; background:white;'>새우튀김</button></div>
+						<div class= 'sel04'><button class="side02" style='width:105px; height:48px; background:white;'>오징어링</button></div>
+						<div class= 'sel04'><button class="side03" style='width:105px; height:48px; background:white;'>감자튀김</button></div>
+					</div>
+					<div class= 'sel02'>음료선택</div>
+					<div class= 'sel01'>
+						<div class= 'sel05'><button class="bever01" style='width:105px; height:48px; background:white;'>콜라</button></div>
+						<div class= 'sel05'><button class="bever02" style='width:105px; height:48px; background:white;'>사이다</button></div>
+						
+					</div>
+					
+				</div>
+				<div class='pic'>
+					<div class= 'pic011'><img src='fri01.jpg' width='306px' height='306px'></div>
+					<div class= 'pic012'><img src='son01.jpg' width='306px' height='306px'></div>
+					<div class= 'pic013'><img src='soy01.jpg' width='306px' height='306px'></div>
+					<div class= 'pic014'><img src='half01.jpg' width='306px' height='306px'></div>
+					<div class= 'pic015'><img src='gal01.jpg' width='306px' height='306px'></div>
+					<div class= 'pic016'><img src='hot01.jpg' width='306px' height='306px'></div>
+				</div>
+				<div class='bev'>
+					<div class= 'bev01'><img src='cok02.jpg' width='146px' height='306px'></div>
+					<div class= 'bev02'><img src='sid02.jpg' width='146px' height='306px'></div>
+				
+				</div>
+				<div class='sid'>
+					<div class= 'sid01'><img src='shr02.jpg' width='306px' height='126px'></div>
+					<div class= 'sid02'><img src='squ02.jpg' width='306px' height='126px'></div>
+					<div class= 'sid03'><img src='pot02.jpg' width='306px' height='126px'></div>
+				</div>
+				<div class='mue'>
+					<div class='mue01'><img src='mue01.jpg' width='146px' height='126px'></div>
+				</div>
+					
+			
+		</div>
+		<!-- section -->
+		<div class='footer'>
+상호명: 치킨,오졌다! | 대표: 김성규 | 개인정보관리책임자: 임수용 | 전화: 010-2565-9988 | 이메일: makehome11@mail.com <br>
+주소: 대전광역시 중구 선화서로 24번길 14 | 사업자등록번호: 322-68-467708 <br>
+Copyright © 2018 SKHOME
+		</div>
+		<!-- footer -->
+	</div>
+			
+
+</body>
+</html>

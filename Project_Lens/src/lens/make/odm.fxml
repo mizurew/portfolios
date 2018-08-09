@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="odm" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="800.0" style="-fx-background-color: #353b46;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lens.make.ODMCon">
+   <children>
+      <Button fx:id="btcle" layoutX="662.0" layoutY="507.0" mnemonicParsing="false" onAction="#btclem" prefHeight="23.0" prefWidth="89.0" style="-fx-background-color: white;" text="초기화면">
+         <font>
+            <Font name="HCR Dotum Bold" size="12.0" />
+         </font></Button>
+      <TextField fx:id="txetc" layoutX="233.0" layoutY="161.0" onAction="#txetcm" prefHeight="23.0" prefWidth="311.0" style="-fx-background-color: tan;" />
+      <Label layoutX="174.0" layoutY="165.0" text="특이사항:" textFill="WHITE">
+         <font>
+            <Font name="HCR Dotum" size="12.0" />
+         </font></Label>
+      <TextField fx:id="txdep" editable="false" layoutX="609.0" layoutY="96.0" onAction="#txdepm" prefHeight="23.0" prefWidth="95.0" style="-fx-background-color: tan;" />
+      <Label layoutX="552.0" layoutY="100.0" text="제품이름:" textFill="WHITE">
+         <font>
+            <Font name="HCR Dotum" size="12.0" />
+         </font></Label>
+      <Label layoutX="63.0" layoutY="132.0" text="생산/주문일자:" textFill="WHITE">
+         <font>
+            <Font name="HCR Dotum" size="12.0" />
+         </font></Label>
+      <Label layoutX="251.0" layoutY="228.0" prefHeight="17.0" prefWidth="101.0" text="생산비/가격:" textFill="WHITE">
+         <font>
+            <Font name="HCR Dotum" size="12.0" />
+         </font></Label>
+      <ComboBox fx:id="cbsid" layoutX="377.0" layoutY="95.0" onAction="#cbsidm" prefHeight="23.0" prefWidth="163.0" style="-fx-background-color: #895511;" />
+      <Label layoutX="226.0" layoutY="99.0" text="제품ID:" textFill="WHITE">
+         <font>
+            <Font name="HCR Dotum" size="12.0" />
+         </font></Label>
+      <Label layoutX="123.0" layoutY="99.0" text="고객ID:" textFill="WHITE">
+         <font>
+            <Font name="HCR Dotum" size="12.0" />
+         </font></Label>
+      <Label layoutX="62.0" layoutY="99.0" text="ID:" textFill="WHITE">
+         <font>
+            <Font name="HCR Dotum" size="12.0" />
+         </font></Label>
+      <TextField fx:id="txdate" editable="false" layoutX="151.0" layoutY="128.0" onAction="#txdatem" prefHeight="23.0" prefWidth="218.0" style="-fx-background-color: tan;" />
+      <TextField fx:id="txpri" layoutX="326.0" layoutY="224.0" onAction="#txprim" prefHeight="23.0" prefWidth="133.0" style="-fx-background-color: tan;" />
+      <DatePicker fx:id="picdate" layoutX="379.0" layoutY="128.0" onAction="#picdatem" style="-fx-background-color: tan;" />
+      <TextField fx:id="txsid" editable="false" layoutX="269.0" layoutY="95.0" onAction="#txsidm" prefHeight="23.0" prefWidth="101.0" style="-fx-background-color: tan;" />
+      <TextField fx:id="txcid" editable="false" layoutX="168.0" layoutY="95.0" onAction="#txcidm" prefHeight="23.0" prefWidth="52.0" style="-fx-background-color: tan;" />
+      <TextField fx:id="txid" editable="false" layoutX="87.0" layoutY="95.0" onAction="#txidm" prefHeight="23.0" prefWidth="35.0" style="-fx-background-color: tan;" />
+      <TableView fx:id="table" layoutX="57.0" layoutY="287.0" onMouseReleased="#infor" onSort="#tablem" prefHeight="214.0" prefWidth="696.0" />
+      <Button fx:id="btsel" layoutX="562.0" layoutY="507.0" mnemonicParsing="false" onAction="#btsel" prefHeight="23.0" prefWidth="89.0" style="-fx-background-color: white;" text="생/주선택">
+         <font>
+            <Font name="HCR Dotum Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="btupd" layoutX="463.0" layoutY="507.0" mnemonicParsing="false" onAction="#btupdm" prefHeight="23.0" prefWidth="89.0" style="-fx-background-color: white;" text="내용변경">
+         <font>
+            <Font name="HCR Dotum Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="btdel" layoutX="365.0" layoutY="507.0" mnemonicParsing="false" onAction="#btdelm" prefHeight="23.0" prefWidth="89.0" style="-fx-background-color: white;" text="생/주삭제">
+         <font>
+            <Font name="HCR Dotum Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="btselA" layoutX="263.0" layoutY="507.0" mnemonicParsing="false" onAction="#btselAm" prefHeight="23.0" prefWidth="89.0" style="-fx-background-color: white;" text="생/주조회">
+         <font>
+            <Font name="HCR Dotum Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="btins" layoutX="55.0" layoutY="507.0" mnemonicParsing="false" onAction="#btinsm" prefHeight="23.0" prefWidth="89.0" style="-fx-background-color: white;" text="주문추가">
+         <font>
+            <Font name="HCR Dotum Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="btback" layoutX="689.0" layoutY="20.0" mnemonicParsing="false" onAction="#btbackm" prefHeight="23.0" prefWidth="71.0" style="-fx-background-color: white;" text="돌아가기">
+         <font>
+            <Font name="HCR Dotum Bold" size="12.0" />
+         </font></Button>
+      <TextField fx:id="txqty" layoutX="148.0" layoutY="223.0" onAction="#txqtym" prefHeight="23.0" prefWidth="52.0" style="-fx-background-color: tan;" />
+      <Label layoutX="56.0" layoutY="227.0" text="생산/주문수량:" textFill="WHITE">
+         <font>
+            <Font name="HCR Dotum" size="12.0" />
+         </font></Label>
+      <ComboBox fx:id="cbcid" layoutX="168.0" layoutY="62.0" onAction="#cbcidm" prefHeight="23.0" prefWidth="52.0" style="-fx-background-color: #895511;" />
+      <TextField fx:id="txopri" editable="false" layoutX="520.0" layoutY="220.0" onAction="#txoprim" prefHeight="23.0" prefWidth="123.0" style="-fx-background-color: tan;" />
+      <Label layoutX="487.0" layoutY="224.0" text="총액:" textFill="WHITE">
+         <font>
+            <Font name="HCR Dotum" size="12.0" />
+         </font></Label>
+      <TextField fx:id="txpqty" layoutX="148.0" layoutY="193.0" onAction="#txpqtym" prefHeight="23.0" prefWidth="52.0" style="-fx-background-color: tan;" />
+      <Label layoutX="82.0" layoutY="197.0" text="재고수량:" textFill="WHITE">
+         <font>
+            <Font name="HCR Dotum" size="12.0" />
+         </font></Label>
+      <TextField fx:id="txrqty" layoutX="148.0" layoutY="252.0" onAction="#txrqtym" prefHeight="23.0" prefWidth="52.0" style="-fx-background-color: tan;" />
+      <Label layoutX="82.0" layoutY="256.0" text="남은수량:" textFill="WHITE">
+         <font>
+            <Font name="HCR Dotum" size="12.0" />
+         </font></Label>
+      <Button fx:id="btqty" layoutX="228.0" layoutY="252.0" mnemonicParsing="false" onAction="#btqtym" style="-fx-background-color: #895511;" text="수량계산" textFill="WHITE">
+         <font>
+            <Font name="HCR Dotum" size="12.0" />
+         </font></Button>
+      <Button fx:id="bttl" layoutX="653.0" layoutY="220.0" mnemonicParsing="false" onAction="#bttlm" prefHeight="23.0" prefWidth="71.0" style="-fx-background-color: #895511;" text="총액계산" textFill="WHITE">
+         <font>
+            <Font name="HCR Dotum" size="12.0" />
+         </font></Button>
+      <Button fx:id="btins2" layoutX="159.0" layoutY="507.0" mnemonicParsing="false" onAction="#btinsm2" prefHeight="23.0" prefWidth="89.0" style="-fx-background-color: white;" text="생산추가">
+         <font>
+            <Font name="HCR Dotum Bold" size="12.0" />
+         </font></Button>
+      <TextField fx:id="txspri" layoutX="326.0" layoutY="194.0" onAction="#txsprim" prefHeight="23.0" prefWidth="133.0" style="-fx-background-color: tan;" />
+      <Label layoutX="266.0" layoutY="198.0" text="현매출액:" textFill="WHITE">
+         <font>
+            <Font name="HCR Dotum" size="12.0" />
+         </font></Label>
+      <TextField fx:id="txopri2" editable="false" layoutX="520.0" layoutY="249.0" onAction="#txopri2m" prefHeight="23.0" prefWidth="123.0" style="-fx-background-color: tan;" />
+      <Label layoutX="463.0" layoutY="253.0" text="결과총액:" textFill="WHITE">
+         <font>
+            <Font name="HCR Dotum" size="12.0" />
+         </font></Label>
+      <Label layoutX="230.0" layoutY="48.0" prefHeight="23.0" prefWidth="218.0" text="Supply&amp;Order Management System" textFill="WHITE">
+         <font>
+            <Font name="HCR Dotum" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="182.0" layoutY="4.0" prefHeight="55.0" prefWidth="275.0" text="생산/주문관리시스템" textFill="WHITE">
+         <font>
+            <Font name="HCR Dotum" size="28.0" />
+         </font>
+      </Label>
+      <Label fx:id="lb1" layoutX="445.0" layoutY="56.0" prefHeight="31.0" prefWidth="265.0" textFill="WHITE">
+         <font>
+            <Font name="HCR Dotum Bold" size="17.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
